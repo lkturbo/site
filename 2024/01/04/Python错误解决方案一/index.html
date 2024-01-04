@@ -11,38 +11,34 @@
   <meta charset="utf-8">
 
   
-  <title>All Posts - turbo</title>
+  <title>Python错误解决方案一</title>
   
-  <link rel="canonical" href="http://example.com/archives/2024/">
+  <link rel="canonical" href="http://example.com/2024/01/04/Python%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E4%B8%80/">
   
-  <meta name="description" content="">
+  <meta name="description" content="出错提示 ERROR: Could not install packages due to an OSError: Missing dependencies for SOCKS support.  WARNING: There was an error checking the latest ver">
   
   
   <meta name="author" content="turbo">
   
   
-  <meta property="og:image" content="http://example.com/images/thumbnail.jpg">
-  
   
   <meta property="og:site_name" content="Turbo&#39;Blog" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="All Posts - turbo" />
+  <meta property="og:title" content="Python错误解决方案一" />
   
-  <meta property="og:description" content="">
+  <meta property="og:description" content="出错提示 ERROR: Could not install packages due to an OSError: Missing dependencies for SOCKS support.  WARNING: There was an error checking the latest ver">
   
-  <meta property="og:url" content="http://example.com/archives/2024/" />
+  <meta property="og:url" content="http://example.com/2024/01/04/Python%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E4%B8%80/" />
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="All Posts - turbo">
+  <meta name="twitter:title" content="Python错误解决方案一">
   
-  <meta name="twitter:description" content="">
-  
-  
-  
-  <meta name="twitter:image" content="http://example.com/images/thumbnail.jpg">
+  <meta name="twitter:description" content="出错提示 ERROR: Could not install packages due to an OSError: Missing dependencies for SOCKS support.  WARNING: There was an error checking the latest ver">
   
   
-  <meta name="twitter:url" content="http://example.com/archives/2024/" />
+  
+  
+  <meta name="twitter:url" content="http://example.com/2024/01/04/Python%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E4%B8%80/" />
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -195,64 +191,22 @@
 </div>
 
         <div class="trans">
-          
-<h2>All Posts</h2>
+            <h2>Python错误解决方案一</h2>
+
+  <p>出错提示</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ERROR: Could not <span class="token function">install</span> packages due to an OSError: Missing dependencies <span class="token keyword">for</span> SOCKS support.
+
+WARNING: There was an error checking the latest version of pip.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>从字面上看是因为有Socks出现问题，于是先取消socks，使用命令</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">unset</span> all_proxy <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">unset</span> ALL_PROXY<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>然后安装代理</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> pysocks<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
-    <article>
-      <div class="row">
-
-        <div class="three columns left lit">
-          <p class="bottom">Jan 4, 2024</p>
-        </div>
-        <div class="nine columns left mb-3">
-          <a href="/2024/01/04/Python%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E4%B8%80/" class="">
-            
-              Python错误解决方案一
-            
-          </a>
-        </div>
-      </div>
-    </article>
-
-    <article>
-      <div class="row">
-
-        <div class="three columns left lit">
-          <p class="bottom">Jan 1, 2024</p>
-        </div>
-        <div class="nine columns left mb-3">
-          <a href="/2024/01/01/netlify%E9%83%A8%E7%BD%B2%E6%88%90%E5%8A%9F%E6%B5%8B%E8%AF%95/" class="">
-            
-              netlify部署成功测试
-            
-          </a>
-        </div>
-      </div>
-    </article>
-
-    <article>
-      <div class="row">
-
-        <div class="three columns left lit">
-          <p class="bottom">Jan 1, 2024</p>
-        </div>
-        <div class="nine columns left mb-3">
-          <a href="/2024/01/01/2024%E5%85%83%E6%97%A6%E8%8A%82%E5%BF%AB%E4%B9%90/" class="">
-            
-              2024元旦节快乐.md
-            
-          </a>
-        </div>
-      </div>
-    </article>
-
-<div class="pagination-bar">
-  <ul class="pagination">
-    
-    
-  </ul>
-</div>
+  <p> — Jan 4, 2024</p>
+  
 
 
         </div>
